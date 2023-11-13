@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize Word</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: aquamarine;
+        }
+
+        #container {
+            text-align: center;
+            background-color: aliceblue;
+            padding: 30px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <label for="wordInput">Enter a word:</label>
+        <input type="text" id="wordInput" placeholder="Type a word">
+        <button onclick="capitalizeWord()">Capitalize</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function capitalizeWord() {
+            var inputElement = document.getElementById("wordInput");
+            var word = inputElement.value;
+            var capitalizedWord = word.toUpperCase();
+            var resultElement = document.getElementById("result");
+            resultElement.textContent = "Capitalized Word: " + capitalizedWord;
+        }
+    </script>
+
+</body>
+</html>
